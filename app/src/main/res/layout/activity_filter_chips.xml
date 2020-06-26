@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:context=".filterChips">
+
+    <com.google.android.material.chip.Chip
+        android:layout_marginTop="16dp"
+        android:id="@+id/chipButt"
+        android:text="Filter Tag"
+        android:layout_centerHorizontal="true"
+        style="@style/Widget.MaterialComponents.Chip.Entry"
+        app:chipIcon="@drawable/location"
+        app:closeIcon="@drawable/closeapp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+    
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_below="@+id/chipButt"
+        android:layout_marginTop="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/textInput"
+            android:hint="Enter Filter Tags"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:weightSum="2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/addTag"
+                android:text="Add Filter Tag"
+                android:layout_marginRight="4dp"
+                android:backgroundTint="@color/colorPrimaryDark"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/showSelected"
+                android:text="Show Selected"
+                android:layout_marginLeft="4dp"
+                android:backgroundTint="@color/colorPrimaryDark"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+
+        <com.google.android.material.chip.ChipGroup
+            android:id="@+id/groupChip"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"></com.google.android.material.chip.ChipGroup>
+
+    </LinearLayout>
+    
+</RelativeLayout>
